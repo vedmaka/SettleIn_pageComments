@@ -1,0 +1,70 @@
+{
+	"name": "pageComments",
+	"version": "0.0.1",
+	"author": [
+		""
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:pageComments",
+	"descriptionmsg": "pagecomments-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+        "pageComments": "pageComments.class.php",
+		"pageCommentsHooks": "pageComments.hooks.php",
+		"SpecialpageComments": "specials/SpecialpageComments.php",
+		"pageCommentsApi": "includes/pageComments.api.php"
+	},
+	"config": {
+		"pageCommentsEnableFoo": true
+	},
+	"callback": "pageCommentsHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"pageCommentsAlias": "pageComments.i18n.alias.php",
+		"pageCommentsMagic": "pageComments.i18n.magic.php"
+	},
+	"Hooks": {
+		"NameOfHook": [
+			"pageCommentsHooks::onNameOfHook"
+		],
+		"ParserFirstCallInit": [
+			"pageCommentsHooks::onParserFirstCallInit"
+		],
+		"LoadExtensionSchemaUpdates": [
+			"pageCommentsHooks::onLoadExtensionSchemaUpdates"
+		]
+	},
+	"MessagesDirs": {
+		"pageComments": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.pagecomments.foo": {
+			"scripts": [
+                "modules/moment.min.js",
+				"modules/ext.pageComments.js",
+				"modules/ext.pageComments.foo.js"
+			],
+			"styles": [
+				"modules/ext.pageComments.foo.css"
+			],
+			"templates": {
+				"comment.mustache": "templates/comment.mustache"
+			},
+			"messages": [
+				"pagecomments-error-unathorized"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "pageComments"
+	},
+	"SpecialPages": {
+		"pageComments": "SpecialpageComments"
+	},
+	"APIModules": {
+		"pagecomments": "pageCommentsApi"
+	},
+	"manifest_version": 1
+}

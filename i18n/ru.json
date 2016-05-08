@@ -1,0 +1,11 @@
+{
+  "@metadata": {
+    "authors": [
+      ""
+    ]
+  },
+  "pagecomments-desc": "Extension for SettleIn skin provides comments support",
+  "pagecomments-i18n-welcome": "Welcome to the localization file of the pageComments extension.",
+  "pagecomments-comment-link": "Комментарии",
+  "pagecomments-error-unathorized": "Авторизуйтесь, что бы оставлять комментарии"
+}
