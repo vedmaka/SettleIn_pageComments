@@ -65,6 +65,7 @@ $( function () {
 		if( !text ) {
 			return false;
 		}
+		this.$element.find('input').val('');
 		var templater = mw.template.get('ext.pagecomments.foo', 'comment_new.mustache');
 		var html = templater.render(
 			{
