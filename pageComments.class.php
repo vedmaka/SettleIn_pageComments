@@ -17,11 +17,13 @@ class pageComments
     {
         $html = '';
 
-        $html .= $parser->insertStripItem( '<a href="#" class="page-comments-wrapper" id="show-comments-link"><i class="fa fa-comment-o"></i>  '.
-            wfMessage( 'pagecomments-comment-link' )->plain()
-            .'</a>' );
+//        $html .= $parser->insertStripItem( '<a href="#" class="page-comments-wrapper" id="show-comments-link"><i class="fa fa-comment-o"></i>  '.
+//            wfMessage( 'pagecomments-comment-link' )->plain()
+//            .'</a>' );
 
         // We already have comments popup form in our skin, lets keep it simple and let it be there
+
+	    $html = '<div class="right-col-comments-block"></div>';
 
         $parser->getOutput()->addModules('ext.pagecomments.foo');
 

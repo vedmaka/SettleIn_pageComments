@@ -49,10 +49,13 @@
 				"modules/ext.pageComments.foo.css"
 			],
 			"templates": {
-				"comment.mustache": "templates/comment.mustache"
+				"comment_new.mustache": "templates/comment_new.mustache",
+				"comments_input.mustache": "templates/comments_input.mustache"
 			},
 			"messages": [
-				"pagecomments-error-unathorized"
+				"pagecomments-error-unathorized",
+				"pagecomments-comments-send-comment",
+				"pagecomments-comments"
 			]
 		}
 	},
@@ -65,6 +68,5 @@
 	},
 	"APIModules": {
 		"pagecomments": "pageCommentsApi"
-	},
-	"manifest_version": 1
+	}
 }
